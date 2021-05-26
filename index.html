@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="rounded">Personal-CV</title>
     <link href="css/personalCv.css" rel="stylesheet">
@@ -18,191 +17,284 @@
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300&family=Pattaya&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid d-flex parent" style="padding:0;">
-        <!-- Start Left Section -->
-        <div class= "left-section" style="padding:34px">
-            <img src="img/personal-image.jpg" class="rounded-circle mx-auto d-block">
-            <h4>Mostafa Mohamed</h4>
-            <span>Front-end Developer</span>
-            <ul class="list-group">
-                <li class='list-group-item'><i class="fa fa-home"></i><a href="#">Home</a></li>
-                <li class='list-group-item'><i class="fa fa-code"></i><a href="#">Skills</a></li>
-                <li class='list-group-item'><i class="fa fa-columns"></i><a href="#">Portfolio</a></li>
-                <li class='list-group-item'><i class="fa fa-user"></i><a href="#">About</a></li>
-                <li class='list-group-item'><i class="fa fa-envelope"></i><a href="#">Contact</a></li>
-            </ul>
-            <p class="copy-right">&copy; Copyright Portfolio</p>
-            <div class="support-us">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+    <nav class="navigator">
+        <h2>mostafa mohamed</h2>
+        <ul class="nav-list">
+            <li><a href="#home"><i class="fa fa-home"></i>home</a></li>
+            <li><a href="#skills"><i class="fas fa-yin-yang"></i>skills</a></li>
+            <li><a href="#about"><i class="fa fa-user"></i>about</a></li>
+            <li><a href="#portfolio"><i class="fab fa-leanpub"></i>portfolio</a></li>
+            <li><a href="#contact"><i class="fa fa-envelope"></i>contact</a></li>
+            <div class="dropdown dropleft">
+                <li class="responsive-nav-button" data-toggle='dropdown'><i class="fa fa-bars"></i></li>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item"><a href="#home"><i class="fa fa-home"></i>home</a></div>
+                    <div class="dropdown-item"><a href="#skills"><i class="fas fa-yin-yang"></i>skills</a></div>
+                    <div class="dropdown-item"><a href="#about"><i class="fa fa-user"></i>about</a></div>
+                    <div class="dropdown-item"><a href="#portfolio"><i class="fab fa-leanpub"></i>portfolio</a></div>
+                    <div class="dropdown-item"><a href="#contact"><i class="fa fa-envelope"></i>contact</a></div>
+                </div>
+            </div>
+            
+        </ul>
+    </nav>
+    
+
+    <div id='demo' class="carousel slide" data-ride='carousel'>
+        <div class="intro-cont">
+            <div class="intro">
+                <h2>hello, my name is mostafa mohamed.</h2>
+                <p>iam front-end developer</p>
+                <button class="btn-primary" id="start-btn" type="button">get started</button>
             </div>
         </div>
-        <!-- End Left Section -->
-
-        <!-- Start Right Section -->
-        <div class= "right-section">
-            <div class="more-portfolio alert alert-success alert-dismissible hide-content">
-                Want To See More Portfolio ?
-                <button type="button" id="yes">Yes</button>
-                <button type="button" id="no" data-dismiss="alert">No</button>
-
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <ul class="carousel-indicators" id="indicators">
+            <li data-target="#demo" data-slide-to = '0' class="active"><a></a></li>
+            <li data-target="#demo" data-slide-to = '1'></li>
+            <li data-target="#demo" data-slide-to = '2'></li>
+            <li data-target="#demo" data-slide-to = '3'></li>
+            <li data-target="#demo" data-slide-to = '4'></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="intro">
+                    <h2>hello, my name is mostafa mohamed.</h2>
+                    <p>iam front-end developer</p>
+                    <button class="btn-primary" id="start-btn" type="button">get started</button>
+                </div>
             </div>
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="carousel-item">
+                <div class="container skills">
+                    <h2>skills</h2>
+                    <div class="start-skills">
+                        <div class="progress-1">
+                            <span class="text">html</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 95%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-2">
+                            <span class="text">css</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 90%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-3">
+                            <span class="text">javascript</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 75%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-4">
+                            <span class="text">dom, bom</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 80%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-5">
+                            <span class="text">eS6</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 80%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-6">
+                            <span class="text">api (Json, Ajax)</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 85%;"></span>
+                            </span>
+                        </div>
+                        <div class="progress-7">
+                            <span class="text">bootstrap</span>
+                            <span class="progress" style="width: 35%;">
+                                <span class="progress-bar" style="width: 75%;"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 
-                <ul class="carousel-indicators">
-                    <li data-target="#demo" data-slide-to="0" class="active"></li>
-                    <li data-target="#demo" data-slide-to="1"></li>
-                    <li data-target="#demo" data-slide-to="2"></li>
-                    <li data-target="#demo" data-slide-to="3"></li>
-                    <li data-target="#demo" data-slide-to="4"></li>
-                </ul>
-        
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="first-content">
-                            <div class="intro">
-                                <h2><span class="hello">Hello</span>, Iam <span class="name">Mostafa Mohamed</span></h2>
-                                <p>iam a front-end developer</p>
+            </div>
+            <div class="carousel-item">
+                <div class="container about">
+                    <h2>About</h2>
+                    <div class="start-about">
+                        <span>Hello, my name is Mostafa Mohamed. I graduated from the College of Computers and Information Systems. I can work under pressure, constantly searching for new information on the field of web design, specifically in the front-end field. My second language is English, and I am good at writing or reading. I can work with the team to reach the best design and final form of the web page.</span>
+                        <img src="img/profile2.jpeg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container portfolio">
+                    <h2>Portfolio</h2>
+                    <div class="start-portfolio">
+                        <div class="portfolio-1">
+                            <img src="img/creative.png">
+                            <div class="portfolio-1-btns">
+                                <button class="btn btn-light" type="button" id="creative-github"><i class="fab fa-github"></i> Github</button>
+                                <button class="btn btn-primary" type="button" id="creative-website">Creative</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container skills">
-                            <div class="row">
-                                <div class="col-sm-3 right-skills">
-                                    <div class="progress-container">
-                                        <p class="skill-text">html</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info row" style="width:95%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">css</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:85%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">javascript</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:80%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">Dom, Bom</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:75%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">ES6</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:80%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">Json, Ajax</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-container">
-                                        <p class="skill-text">Bootstrap</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" style="width:80%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="portfolio-2">
+                            <img src="img/weather.png">
+                            <div class="portfolio-2-btns">
+                                <button class="btn btn-light" type="button" id="weather-github"><i class="fab fa-github"></i> Github</button>
+                                <button class="btn btn-primary" type="button" id="weather-website">Weather</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="portfolio">
-                            <div class="container">
-                                <div class="row p-5">
-                                    <div class="col-sm-3 portfolio-1">
-                                        <img src='portfolio/creative.png'>
-                                        <button class="btn btn-light mt-3"><i class="fab fa-github"></i> Github</button>
-                                        <button class="btn btn-primary mt-3">Creative</button>
-                                    </div>
-                                    <div class="col-sm-3 portfolio-2">
-                                        <img src='portfolio/weather.png'>
-                                        <button class="btn btn-light mt-3"><i class="fab fa-github"></i> Github</button>
-                                        <button class="btn btn-primary mt-3">Weather</button>
-                                    </div>
-                                    <div class="col-sm-3 portfolio-3">
-                                        <img src='portfolio/blogr.png'>
-                                        <button class="btn btn-light mt-3"><i class="fab fa-github"></i> Github</button>
-                                        <button class="btn btn-primary mt-3">Blogr</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container about">
-                        <div class="row">
-                            <div class="col text">
-                                <h2>About Me</h2>
-                                <p>Hello, my name is Mostafa Mohamed. I graduated from the College of Computers and Information Systems. I can work under pressure, constantly searching for new information on the field of web design, specifically in the front-end field. My second language is English, and I am good at writing or reading. I can work with the team to reach the best design and final form of the web page.</p>
-                            </div>
-                            <div class="col about-img">
-                                <img src="img/profile2.jpeg">
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container contact">
-                            <div class="row p-5">
-                                <div class="contact-text">
-                                    <h2>Contact Me</h2>
-                                </div>
-                                <div class="contact-form">
-                                    <form method='POST' action="" class="contact-fields">
-                                        <div>
-                                            <label>Username</label>
-                                            <input type="text" placeholder="Enter your Name" name="username" autocomplete="off">
-                                        </div>
-                                        <div>
-                                            <label>Email</label>
-                                            <input type="email" placeholder="Enter your email" name="email" autocomplete="off">
-                                        </div>
-                                        <div>
-                                            <label>Password</label>
-                                            <input type="password" placeholder="Enter your password" name="password" autocomplete="off">
-                                        </div>
-                                        <div>
-                                            <label>Send Me Message</label>
-                                            <textarea placeholder="Enter your Message" name="message"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
+                        <div class="portfolio-3">
+                            <img src="img/blogr.png">
+                            <div class="portfolio-3-btns">
+                                <button class="btn btn-light" type="button" id="blogr-github"><i class="fab fa-github"></i> Github</button>
+                                <button class="btn btn-primary" type="button" id="blogr-website">Blogr</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-        
             </div>
-        </div> 
-        
-        <!-- End Right Section -->  
-        
+            <div class="carousel-item">
+                <div class="container contact">
+                    <h2>Contact</h2>
+                    <div class="start-contact">
+                        <form method="POST" action="">
+                            <div class="form-1">
+                                <label>Username</label>
+                                <input type="text" name="username" placeholder="Enter your name">
+                            </div>
+                            <div class="form-2">
+                                <label>Password</label>
+                                <input type="password" name="password" placeholder="Enter your Password">
+                            </div>
+                            <div class="form-1">
+                                <label>Email</label>
+                                <input type="email" name="email" placeholder="Enter your Email">
+                            </div>
+                            <div class="form-1">
+                                <label>Send Message</label>
+                                <textarea name="message" placeholder="Enter your Message"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide='prev'>
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide='next'>
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
-    
-    
+    <div class="container skills" id="skills">
+        <h2>skills</h2>
+        <div class="start-skills">
+            <div class="progress-1">
+                <span class="text">html</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 95%;"></span>
+                </span>
+            </div>
+            <div class="progress-2">
+                <span class="text">css</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 90%;"></span>
+                </span>
+            </div>
+            <div class="progress-3">
+                <span class="text">javascript</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 75%;"></span>
+                </span>
+            </div>
+            <div class="progress-4">
+                <span class="text">dom, bom</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 80%;"></span>
+                </span>
+            </div>
+            <div class="progress-5">
+                <span class="text">eS6</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 80%;"></span>
+                </span>
+            </div>
+            <div class="progress-6">
+                <span class="text">api (Json, Ajax)</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 85%;"></span>
+                </span>
+            </div>
+            <div class="progress-7">
+                <span class="text">bootstrap</span>
+                <span class="progress">
+                    <span class="progress-bar" style="width: 75%;"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="about-cont">
+        <div class="container about" id="about">
+            <h2>About</h2>
+            <div class="start-about">
+                <span>Hello, my name is Mostafa Mohamed. I graduated from the College of Computers and Information Systems. I can work under pressure, constantly searching for new information on the field of web design, specifically in the front-end field. My second language is English, and I am good at writing or reading. I can work with the team to reach the best design and final form of the web page.</span>
+                <img src="img/profile2.jpeg">
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-cont">
+        <div class="container portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="start-portfolio">
+                <div class="portfolio-1">
+                    <img src="img/creative.png">
+                    <div class="portfolio-1-btns">
+                        <button class="btn btn-light" type="button" id="creative-github"><i class="fab fa-github"></i> Github</button>
+                        <button class="btn btn-primary" type="button" id="creative-website">Creative</button>
+                    </div>
+                </div>
+                <div class="portfolio-2">
+                    <img src="img/weather.png">
+                    <div class="portfolio-2-btns">
+                        <button class="btn btn-light" type="button" id="weather-github"><i class="fab fa-github"></i> Github</button>
+                        <button class="btn btn-primary" type="button" id="weather-website">Weather</button>
+                    </div>
+                </div>
+                <div class="portfolio-3">
+                    <img src="img/blogr.png">
+                    <div class="portfolio-3-btns">
+                        <button class="btn btn-light" type="button" id="blogr-github"><i class="fab fa-github"></i> Github</button>
+                        <button class="btn btn-primary" type="button" id="blogr-website">Blogr</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-cont">
+        <div class="container contact" id="contact">
+            <h2>Contact</h2>
+            <div class="start-contact">
+                <form method="POST" action="">
+                    <div class="form-1">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="Enter your name">
+                    </div>
+                    <div class="form-2">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your Password">
+                    </div>
+                    <div class="form-1">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Enter your Email">
+                    </div>
+                    <div class="form-1">
+                        <label>Send Message</label>
+                        <textarea name="message" placeholder="Enter your Message"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="js/personalCv.js"></script>
 </body>
 </html>

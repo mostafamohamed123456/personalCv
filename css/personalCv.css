@@ -3,364 +3,605 @@
     -moz-box-sizing:border-box;
     -o-box-sizing:border-box;
     box-sizing:border-box;
-    margin: 0;
-    padding: 0 ;
-}
-body{
-    user-select: none;
+    margin:0;
+    padding:0;
 }
 ul{
-    list-style-type:none;
+    list-style:none;
 }
-/* Start left Section */
-.left-section{
-    background:rgb(12, 12, 31);
-    border-right:1px solid #AAA;
-    position: relative;
-    z-index: 1000;
-}
-.left-section img{
-    width:100px;
-    height:100px;
-    margin-bottom:50px;
-}
-.left-section span, h4{
-    text-align:center;
-    display:block;
-    margin-bottom:55px;
+/* Start Navbar */
+.navigator{
+    background:#333;
     color:#EEE;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.navigator h2{
     font-family:'KoHo',Arial,sans-serif;
+    text-transform:capitalize;
+    font-weight:bold;
+    font-size:23px;
+    padding:10px;
+    flex-shrink:0;
 }
-.left-section ul{
-    margin-bottom:50px;
-    width: 100%;
+.navigator .nav-list li{
+    display:inline-block;
+    padding-top: 10px;;
 }
-.left-section ul li{
-    text-align:left;
-    cursor:pointer;
-    transition:all .2s ease-in-out;
-}
-.left-section ul li a{
-    font-family:'KoHo',Arial,sans-serif;
-    font-size:17px;
+.navigator .nav-list li a{
+    padding:10px;
     text-transform:uppercase;
-    font-weight:bolder;
-    color:rgb(12, 12, 31);
-    width: 100%;
-}
-.left-section ul li.active-link{
-    color: #EEE;
-    background:rgba(12, 12, 31, 0.123)
-}
-.left-section ul li i{
-    margin-right: 10px;
-    text-align: left;
-}
-.left-section ul li:hover{
-    background:rgba(12, 12, 31, 0.123);
-    color:#EEE;
-}
-.left-section ul li:hover a{
-    color:#EEE;
-    text-decoration: none;
-}
-.left-section .copy-right{
-    text-align:center;
-    font-family:'KoHo',Arial,Tahoma,sans-serif;
-    color:#EEE;
-    margin-bottom:10px;
-}
-.left-section .support-us{
-    text-align:center;
-    margin: 0 auto;
-}
-.left-section .support-us a i{
+    margin-left:5px;
+    font-family:"KoHo",Tahoma,sans-serif;
     color:#EEE
 }
-/* End left Section */
-
-/* Start Right Section */
-.right-section{
-    background:linear-gradient(to right, rgb(12, 12, 31),#000);
-    overflow: hidden;
-    width: 100%;
+.navigator .nav-list li a:hover{
+    text-decoration:none;
 }
-.right-section .first-content{
-    transition:all .6s ease-in-out;
+.navigator .nav-list li a i{
+    margin-right:5px;
 }
-.right-section .first-content.left{
-    left: -90%;
+.navigator .nav-list .responsive-nav-button{
+    display:none;
+    cursor:pointer;
 }
-.right-section .first-content.right{
-    margin-right: -90%;
-}
-.hide-content{
-    display: none;
-}
-.right-section .intro{
-    margin: 220px auto;
-    text-align: center;
-}
-.right-section .intro h2{
-    width:100%;
-    font-family:'KoHo',Arial,Tahoma,sans-serif;
-    color:#EEE;
+.dropdown-menu .dropdown-item a{
+    color:#333;
+    margin-bottom:5px;
     text-transform:uppercase;
-    font-size:29px;
 }
-.right-section .intro h2 .hello{
-    font-family:'Dancing Script',sans-serif;
-    color:#CCC
+.dropdown-menu .dropdown-item a i{
+    margin-right:5px;
 }
-.right-section .intro h2 .name{
-    color:rgb(226, 38, 38);
-    font-weight:bold;
-    letter-spacing:2px
+/* End Navbar */
+/* Start first-section */
+#demo{
+    height:93vh;
+    background:url(../img/002.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
 }
-.right-section .intro p{
+#demo::before{
+    position:absolute;
+    content:'';
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.68);
+}
+#demo .carousel-item .intro{
     text-align:center;
-    color:#EEE;
-    text-transform:capitalize;
-    font-family:'KoHo',Arial,sans-serif;
-    font-size:18px;
-    letter-spacing:2.5px
+    margin-top:250px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.right-section .skills{
-    margin: 100px auto;
-    transition: all .6s ease-in-out;
-}
-.right-section .skills .left-skills, .right-skills{
-    margin: 0 auto;
-}
-
-.right-section .skills .skill-text{
-    font-size:18px;
+#demo .carousel-item .intro h2{
     color:#EEE;
     font-family:'KoHo', Arial, sans-serif;
-    text-transform: capitalize;
+    text-transform:capitalize;
 }
-.portfolio{
-    text-align: center;
-    margin:0 auto;
-    position:relative;
-    transition: all .6s ease-in-out;
+#demo .carousel-item .intro p{
+    color:rgb(231, 83, 15);
+    font-size:22px;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    font-weight:bold
 }
-.portfolio div{
-    text-align:center;
-    margin: 0 auto;
+#demo .carousel-item .intro button{
+    padding:8px;
+    text-transform:capitalize;
+    font-family:'KoHo', Arial, Tahoma, sans-serif;
+    border-radius:4px;
+    border:0px;
+    font-size:19px;
+    outline:none;
 }
-.portfolio div img{
-    width:200px;
-    height: 400px;
+/* End first-section */
+/* Start skills-section */
+#demo .carousel-item .skills{
+    margin: 80px auto;
 }
-.portfolio .portfolio-3{
-    padding-right: 53px;
+#demo .carousel-item .skills h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
 }
-.about{
-    position:relative;
-    margin:0 auto;
-    transition: all .6s ease-in-out;
-}
-.about.left{
-    left: -107%;
-}
-.about.right{
-    margin-right: -107%;
-}
-.about div{
-    margin:0 auto;
-}
-.about div img{
-    width: 300px;
-    height: 400px;
-    padding-top: 30px;
-    margin-top: 120px;
-    border-radius:8px;
-}
-.about .text{
-    padding-top: 150px;
-    padding-left: 150px;
-}
-.about .text h2{
-    color:#EEE;
-    font-family:Tahoma,Arial,sans-serif;
-}
-.about .text p{
-    color:#EEE;
-    font-family:'KoHo',Tahoma,Arial,sans-serif;
-    letter-spacing:1.2px;
-    line-height:42px;
-}
-
-.contact{
-    margin:0 auto;
-    position: relative;
-    transition:all .6s ease-in-out;
-}
-.contact.left{
-    left: -107%;
-}
-.contact.right{
-    margin-right: -107%;
-}
-.contact .contact-text h2{
-    display:block;
-    margin-bottom:55px;
-    padding:86px 0 0 100px;
-    color:#EEE;
-    font-family:'KoHo',Arial,Tahoma,sans-serif
-}
-.contact .contact-text h2{
-    font-family:Tahoma,sans-serif
-}
-.contact .contact-fields{
-    padding-top:144px;
-}
-.contact .contact-fields div{
+#demo .carousel-item .progress-1,
+#demo .carousel-item .progress-2,
+#demo .carousel-item .progress-3,
+#demo .carousel-item .progress-4,
+#demo .carousel-item .progress-5,
+#demo .carousel-item .progress-6,
+#demo .carousel-item .progress-7{
     display: flex;
     justify-content: space-between;
-}
-.contact .contact-fields div label{
-    margin-right: 150px;
-    position: relative;
-    left: -160px;
-    font-family:'KoHo',Arial,sans-serif;
-    color:#EEE;
-}
-.contact .contact-fields div input{
-    display:block;
     margin-bottom:30px;
-    border-radius:2px;
-    border:0px;
-    width:350px;
-    padding:7px;
-    outline:none;
 }
-.contact .contact-fields textarea{
-    width:350px;
-    resize:none;
-    border-radius:2px;
-    outline:none;
-    border:0px;
-    padding:15px;
+#demo .carousel-item .progress-1 .text,
+#demo .carousel-item .progress-2 .text,
+#demo .carousel-item .progress-3 .text,
+#demo .carousel-item .progress-4 .text,
+#demo .carousel-item .progress-5 .text,
+#demo .carousel-item .progress-6 .text,
+#demo .carousel-item .progress-7 .text{
+    color:#EEE;
+    font-family:Tahoma,Arial,sans-serif;
+    text-transform:uppercase;
 }
-.contact .contact-fields button{
-    display:block;
-    float: right;
-    margin-top: 5px;
+#demo .carousel-item .progress-1 .progress-bar,
+#demo .carousel-item .progress-2 .progress-bar,
+#demo .carousel-item .progress-3 .progress-bar,
+#demo .carousel-item .progress-4 .progress-bar,
+#demo .carousel-item .progress-5 .progress-bar,
+#demo .carousel-item .progress-6 .progress-bar,
+#demo .carousel-item .progress-7 .progress-bar{
+    position: relative;
 }
-.right-section .more-portfolio{
-    width: 413px;
+#demo .carousel-item .progress-1 .progress-bar::before,
+#demo .carousel-item .progress-2 .progress-bar::before,
+#demo .carousel-item .progress-3 .progress-bar::before,
+#demo .carousel-item .progress-4 .progress-bar::before,
+#demo .carousel-item .progress-5 .progress-bar::before,
+#demo .carousel-item .progress-6 .progress-bar::before,
+#demo .carousel-item .progress-7 .progress-bar::before{
     position: absolute;
-    left: 43%;
-    top: 86%;
+    top: 8px;
+    color:#EEE
 }
-.right-section .more-portfolio.hide-content{
-    display:none;
+#demo .carousel-item .progress-1 .progress-bar::before{
+    content: '95%';
+    left: 50%;
 }
-.right-section .more-portfolio #yes{
-    background:#d4edda;
+#demo .carousel-item .progress-2 .progress-bar::before{
+    content: '90%';
+    left: 53%;
+}
+#demo .carousel-item .progress-3 .progress-bar::before{
+    content: '75%';
+    left: 64%;
+}
+#demo .carousel-item .progress-4 .progress-bar::before{
+    content: '80%';
+    left: 60%;
+}
+#demo .carousel-item .progress-5 .progress-bar::before{
+    content: '80%';
+    left: 60%;
+}
+#demo .carousel-item .progress-6 .progress-bar::before{
+    content: '85%';
+    left: 56.6%;
+}
+#demo .carousel-item .progress-7 .progress-bar::before{
+    content: '75%';
+    left: 64.2%;
+}
+/* End skills-section */
+/* Start about-section */
+#demo .carousel-item .about{
+    margin:80px auto;
+}
+#demo .carousel-item .about h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo', Tahoma, Arial, sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+#demo .carousel-item .about .start-about{
+    display: flex;
+    justify-content:space-between;
+}
+#demo .carousel-item .about .start-about span{
+    color: #EEE;
+    font-family: 'KoHo', Tahoma, sans-serif;
+    line-height: 3;
+    font-size: 20px;
+}
+#demo .carousel-item .about .start-about img{
+    height: 321px;
+    border-radius: 4px;
+    width: 82%;
+    display: block;
+    margin: 5px auto;
+}
+/* End about-section */
+/* Start portfolio-section */
+#demo .carousel-item .portfolio{
+    margin: 80px auto;
+}
+#demo .carousel-item .portfolio h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo',Tahoma,sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+#demo .carousel-item .portfolio .start-portfolio{
+    display:flex;
+    justify-content:space-between;
+}
+#demo .carousel-item .portfolio .portfolio-1 img,#demo .carousel-item .portfolio .portfolio-2 img,#demo .carousel-item .portfolio .portfolio-3 img{
+    width:200px;
+    height: 300px;
+}
+#demo .carousel-item .portfolio-1 .portfolio-1-btns, 
+#demo .carousel-item .portfolio-2 .portfolio-2-btns, 
+#demo .carousel-item .portfolio-3 .portfolio-3-btns{
+    text-align: center;
+    margin-top: 4px;
+} 
+/* End portfolio-section */
+/* Start contact-section */
+#demo .carousel-item .contact{
+    margin: 80px auto;
+}
+#demo .carousel-item .contact h2{
+    color:rgb(231, 83, 15);
+    font-weight:bold;
+    font-family:'KoHo',Arial,Tahoma,sans-serif;
+    text-transform:uppercase;
+}
+#demo .carousel-item .contact .start-contact form > div{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 30px;
+}
+#demo .carousel-item .contact .start-contact form div label{
+    color:#EEE;
+    font-size:18px;
+    font-family:'KoHo', Arial, sans-serif;
+}
+#demo .carousel-item .contact .start-contact form div input, textarea{
+    width: 280px;
+    padding:8px;
+    outline:none;
+    border-radius:5px;
     border:0px;
-    color:rgb(2, 2, 27);
-    margin: 0 8px;
 }
-.right-section .more-portfolio #yes:hover{
-    text-decoration:underline
+#demo .carousel-item .contact .start-contact form div textarea{
+    resize:none;
+    height: 125px;;
 }
-.right-section .more-portfolio #no{
-    background:#d4edda;
-    border:0px;
-    color:rgb(2, 2, 27);
-    margin: 0 8px;
-}
-.right-section .more-portfolio #no:hover{
-    text-decoration:underline
-}
-.right-section .carousel-indicators{
-    top: 521px;
-}
-.right-section .carousel-control-next{
-    align-items: inherit;
-    top:297px;
-}
-.right-section .carousel-control-prev{
-    align-items: inherit;
-    top:297px;
-}
+/* End contact-section */
 
-@media (min-width:320px) and (max-width:499px){
-    .parent{
-        flex-direction: column;
+
+/*Start intro outside*/
+.intro-cont{
+    display: none;
+}
+.intro-cont .intro{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 250px;
+}
+.intro-cont .intro h2{
+    color:#EEE;
+    font-family:'KoHo', Arial, sans-serif;
+    text-transform:capitalize;
+}
+.intro-cont .intro p{
+    color:rgb(231, 83, 15);
+    font-size:22px;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    font-weight:bold
+}
+.intro-cont .intro button{
+    padding:8px;
+    text-transform:capitalize;
+    font-family:'KoHo', Arial, Tahoma, sans-serif;
+    border-radius:4px;
+    border:0px;
+    font-size:19px;
+    outline:none;
+}
+/*End intro outside*/
+
+
+/*Start skills outside*/
+.skills{
+    margin: 115px auto;
+}
+.skills h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.skills .progress{
+    width: 35%;
+}
+.progress-1,
+.progress-2,
+.progress-3,
+.progress-4,
+.progress-5,
+.progress-6,
+.progress-7{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.progress-1 .text,
+.progress-2 .text,
+.progress-3 .text,
+.progress-4 .text,
+.progress-5 .text,
+.progress-6 .text,
+.progress-7 .text{
+    color:#000;
+    font-family:Tahoma,Arial,sans-serif;
+    text-transform:uppercase;
+}
+.progress-1 .progress-bar,
+.progress-2 .progress-bar,
+.progress-3 .progress-bar,
+.progress-4 .progress-bar,
+.progress-5 .progress-bar,
+.progress-6 .progress-bar,
+.progress-7 .progress-bar{
+    position: relative;
+}
+.progress-1 .progress-bar::before,
+.progress-2 .progress-bar::before,
+.progress-3 .progress-bar::before,
+.progress-4 .progress-bar::before,
+.progress-5 .progress-bar::before,
+.progress-6 .progress-bar::before,
+.progress-7 .progress-bar::before{
+    position: absolute;
+    top: 8px;
+    color:#EEE
+}
+.progress-1 .progress-bar::before{
+    content: '95%';
+    left: 50%;
+}
+.progress-2 .progress-bar::before{
+    content: '90%';
+    left: 53%;
+}
+.progress-3 .progress-bar::before{
+    content: '75%';
+    left: 64%;
+}
+.progress-4 .progress-bar::before{
+    content: '80%';
+    left: 60%;
+}
+.progress-5 .progress-bar::before{
+    content: '80%';
+    left: 60%;
+}
+.progress-6 .progress-bar::before{
+    content: '85%';
+    left: 56.6%;
+}
+.progress-7 .progress-bar::before{
+    content: '75%';
+    left: 64.2%;
+}
+/* End Skills outside */
+/* Start about outside */
+.about-cont{
+    background:#333;
+    height:80vh;
+}
+.about-cont .about{
+    margin:80px auto 0;
+    padding: 116px 0 0;
+}
+.about-cont .about h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo', Tahoma, Arial, sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.about-cont .about .start-about{
+    display: flex;
+    justify-content:space-between;
+}
+.about-cont .about .start-about span{
+    color: #EEE;
+    font-family: 'KoHo', Tahoma, sans-serif;
+    line-height: 3;
+    font-size: 20px;
+}
+.about-cont .about .start-about img{
+    height: 321px;
+    border-radius: 4px;
+    width: 82%;
+    display: block;
+    margin: 5px auto;
+}
+/* End about outside */
+/* Start portfolio outside */
+.portfolio-cont .portfolio{
+    margin: 0 auto;
+    padding: 145px 0;
+}
+.portfolio-cont .portfolio h2{
+    color:rgb(231, 83, 15);
+    font-family:'KoHo',Tahoma,sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.portfolio-cont .portfolio .start-portfolio{
+    display:flex;
+    justify-content:space-between;
+}
+.portfolio-cont .portfolio .portfolio-1 img,.portfolio .portfolio-2 img,.portfolio .portfolio-3 img{
+    width:200px;
+    height: 300px;
+}
+.portfolio-cont .portfolio-1 .portfolio-1-btns, 
+.portfolio-cont .portfolio-2 .portfolio-2-btns, 
+.portfolio-cont .portfolio-3 .portfolio-3-btns{
+    text-align: center;
+    margin-top: 4px;
+}
+/* End portfolio outside */
+/* Start contact outside */
+.contact-cont{
+    background:#333;
+    
+}
+.contact-cont .contact{
+    margin: 0px auto;
+    padding:145px 0
+}
+.contact-cont .contact h2{
+    color:rgb(231, 83, 15);
+    font-weight:bold;
+    font-family:'KoHo',Arial,Tahoma,sans-serif;
+    text-transform:uppercase;
+}
+.contact-cont .contact .start-contact form > div{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 30px;
+}
+.contact-cont .contact .start-contact form div label{
+    color:#EEE;
+    font-size:18px;
+    font-family:'KoHo', Arial, sans-serif;
+}
+.contact-cont .contact .start-contact form div input, textarea{
+    width: 280px;
+    padding:8px;
+    outline:none;
+    border-radius:5px;
+    border:0px;
+}
+.contact-cont .contact .start-contact form div textarea{
+    resize:none;
+    height: 125px;;
+}
+/* End contact outside */
+@media(min-width:500px) And (max-width:725px){
+    .navigator{
+        justify-content: space-between;
     }
-    .first-content .intro h2{
-        margin-bottom: 2.5rem;
+    .navigator .nav-list li a{
+        display:none;
     }
-    .left-section ul li{
-        text-align:center
+    .navigator .nav-list .responsive-nav-button{
+        display:inline-block;
+        margin-right:20px;
+        position: relative;
+        top: -11px;
     }
-    .right-section .skills .skill-text{
-        text-align: center;
+    .dropdown-menu{
+        transform: translate3d(300px, 37px, 0px);
     }
-    .portfolio{
-        padding:0;
+    .intro-cont{
+        display: block;
     }
-    .portfolio .container{
-        padding:0;
-    }
-    .portfolio .row{
-        margin-top: -47px;
-    }
-    .portfolio .row .portfolio-3{
-        padding-right: 0;
-    }
-    .portfolio div{
-        display: inline-block;
-        margin: 0;
-    }
-    .portfolio div img{
-        width:120px;
-        height:120px;
-    }
-    .about div{
-        text-align:center
-    }
-    .about .text{
-        padding: 0;
-    }
-    .about .text h2{
-        line-height: 1.2;
-    }
-    .about .text p{
-        line-height: 38px;
-        font-size:17px
-    }
-    .about .about-img{
+    #indicators{
         display: none;
     }
-    .contact{
-        margin: -27px auto;
+    .carousel-inner{
+        display: none;
     }
-    .contact .contact-text h2{
-        margin-bottom: 0;
-        padding: 0;
+    a[data-slide='prev'], a[data-slide='next']{
+        display: none;;
     }
-    .contact .contact-fields{
-        padding-top: 0;
+    #skills{
+        margin: 5px auto;
     }
-    .contact .contact-fields div{
-        display: block;
-        justify-content: inherit;
+    #skills .progress{
+        width: 56%;
     }
-    .contact .contact-fields div label{
-        margin-right: 0;
-        position: inherit;
-        left: 0;
+    .about-cont .about{
+        padding:6px 5px 0;
     }
-    .contact .contact-fields div input{
-        width: 97%;
+    .about-cont .about .start-about{
+        flex-direction: column;
     }
-    .contact .contact-fields div textarea{
-        width: 97%;
+    .about-cont .about .start-about span{
+        line-height: 1.4;
+        font-size:19px;
+    }
+    .portfolio-cont .portfolio{
+        padding:17px 0 17px
+    }
+    .portfolio-cont .portfolio .start-portfolio{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-cont .contact{
+        padding: 9px 0;
+    }
+    .contact-cont .contact .start-contact form > div{
+        flex-direction: column;
+        align-items: center;
     }
 }
-/* End Right Section */
+@media(min-width:300px) And (max-width:390px){
+    .navigator{
+        justify-content: space-between;
+    }
+    .navigator .nav-list li a{
+        display:none;
+    }
+    .navigator .nav-list .responsive-nav-button{
+        display:inline-block;
+        margin-right:20px;
+        position: relative;
+        top: -11px;
+    }
+    .dropdown-menu{
+        transform: translate3d(300px, 37px, 0px);
+    }
+    .intro-cont{
+        display: block;
+    }
+    #indicators{
+        display: none;
+    }
+    .carousel-inner{
+        display: none;
+    }
+    a[data-slide='prev'], a[data-slide='next']{
+        display: none;;
+    }
+    #skills{
+        margin: 5px auto;
+    }
+    #skills .progress{
+        width: 56%;
+    }
+    .about-cont .about{
+        padding:6px 5px 0;
+    }
+    .about-cont .about .start-about{
+        flex-direction: column;
+    }
+    .about-cont .about .start-about span{
+        line-height: 2;
+        font-size:19px;
+    }
+    .about-cont .about .start-about img{
+        display: none;
+    }
+    .portfolio-cont .portfolio{
+        padding:17px 0 17px
+    }
+    .portfolio-cont .portfolio .start-portfolio{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-cont .contact{
+        padding: 9px 0;
+    }
+    .contact-cont .contact .start-contact form > div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
