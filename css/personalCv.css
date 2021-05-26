@@ -483,6 +483,9 @@ ul{
     resize:none;
     height: 125px;;
 }
+.contact-cont .contact .start-contact form input[type="submit"]{
+    float: right;
+}
 /* End contact outside */
 @media(min-width:500px) And (max-width:725px){
     .navigator{
@@ -541,6 +544,11 @@ ul{
     .contact-cont .contact .start-contact form > div{
         flex-direction: column;
         align-items: center;
+    }
+    .contact-cont .contact .start-contact form input[type="submit"]{
+        float: inherit;
+        display: block;
+        margin: 0 auto;
     }
 }
 @media(min-width:300px) And (max-width:390px){
@@ -603,5 +611,10 @@ ul{
     .contact-cont .contact .start-contact form > div{
         flex-direction: column;
         align-items: center;
+    }
+    .contact-cont .contact .start-contact form input[type="submit"]{
+        float: inherit;
+        display: block;
+        margin: 0 auto;
     }
 }
