@@ -57,7 +57,7 @@ ul{
 /* End Navbar */
 /* Start first-section */
 #demo{
-    height:93vh;
+    min-height:93vh;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
@@ -69,7 +69,7 @@ ul{
     top: 0;
     left: 0;
     width:100%;
-    height:100%;
+    min-height:100%;
     background:rgba(0, 0, 0, 0.68);
 }
 #demo .carousel-item .intro{
@@ -390,7 +390,7 @@ ul{
 /* Start about outside */
 .about-cont{
     background:#333;
-    height:80vh;
+    min-height:80vh;
 }
 .about-cont .about{
     margin:80px auto 0;
@@ -486,6 +486,47 @@ ul{
     float: right;
 }
 /* End contact outside */
+
+/* Start more project section*/
+.more-project-btn{
+    position:fixed;
+    top: 90%;
+    right: 45px;
+    box-shadow:0 0 8px #000;
+    outline:none;
+    z-index: 2;
+}
+.more-project-div{
+    position:absolute;
+    top: 75%;
+    width:450px;
+    padding:15px;
+    margin: 0 auto;
+    text-align: center;
+    right: -50%;
+    left: -50%;
+    transition: all .6s ease-in-out;
+}
+.more-project-div #yes, #no{
+    color:#EEE;
+}
+.more-project-div #yes:hover, #no:hover{
+    color:#05F;
+    text-decoration:underline;
+}
+.more-project-div.remove-alert{
+    opacity:0;
+}
+.more-project-div .turn-no{
+    position:absolute;
+    top: -8px;
+    right: 0;
+    outline: none;
+    color: #EEE;
+    font-weight: bold;
+    font-size: 21px;
+    padding: 7px;
+}
 @media(min-width:500px) And (max-width:725px){
     .navigator{
         justify-content: space-between;
@@ -615,5 +656,9 @@ ul{
         float: inherit;
         display: block;
         margin: 0 auto;
+    }
+    .more-project-div{
+        top: 80%;
+        width:320px;
     }
 }
