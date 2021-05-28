@@ -517,6 +517,9 @@ ul{
 .more-project-div.remove-alert{
     opacity:0;
 }
+.more-project-div.hide-alert{
+    display: none;
+}
 .more-project-div .turn-no{
     position:absolute;
     top: -8px;

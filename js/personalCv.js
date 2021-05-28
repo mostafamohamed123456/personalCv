@@ -88,17 +88,22 @@ blogrLink.onclick = function(){
 }
 
 moreProjectBtn.onclick = function(){
-    moreProject.classList.toggle('remove-alert');
+    moreProject.classList.remove('hide-alert');
+    setTimeout(function(){
+        moreProject.classList.toggle('remove-alert');
+    },500)
+    
+    
 }
 closeButton.onclick = function(){
     moreProject.classList.add('remove-alert');
     setTimeout(function(){
-        moreProject.style.display = 'none';
+        moreProject.classList.add('hide-alert');
     },1000)
 }
 noButton.onclick = function(){
     moreProject.classList.add('remove-alert');
     setTimeout(function(){
-        moreProject.style.display = 'none';
+        moreProject.classList.add('hide-alert');
     },1000)
 }
