@@ -497,7 +497,7 @@ ul{
     z-index: 2;
 }
 .more-project-div{
-    position:absolute;
+    position:fixed;
     top: 75%;
     width:450px;
     padding:15px;
