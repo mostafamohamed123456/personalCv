@@ -88,9 +88,9 @@ blogrLink.onclick = function(){
 }
 
 moreProjectBtn.onclick = function(){
-    moreProject.classList.remove('hide-alert');
+    moreProject.classList.toggle('remove-alert');
     setTimeout(function(){
-        moreProject.classList.toggle('remove-alert');
+        moreProject.classList.toggle('hide-alert');
     },500)
     
     
